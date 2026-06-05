@@ -10,23 +10,22 @@ The project follows an end-to-end workflow including data cleaning, exploratory 
 ## 📁 Dataset
 The dataset represents retail customer purchase behavior and includes:
 
-- Customer ID and demographics (if available)
+- Customer ID and Demographics
 - Product categories
 - Purchase transactions
-- Quantity and unit price
-- Purchase date
-- Total spending
+- Review Ratings
+- Subscription Status
+- Discount and Promo Codes applied
+- Frequency of Purchases
 
 This data is used to understand customer behavior, sales performance, and product trends.
 
 ---
 
 ## 🛠 Tools & Technologies
-- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Jupyter Notebook (Python for EDA & cleaning)
 - MySQL (SQL queries for analysis)
 - Power BI (Interactive dashboard creation)
-- Jupyter Notebook (EDA & cleaning)
-- Excel (Optional data preview)
 
 ---
 
@@ -36,78 +35,46 @@ This data is used to understand customer behavior, sales performance, and produc
 - Loaded dataset using Pandas
 - Performed initial inspection using `.head()`, `.info()`, and `.describe()`
 
-### 2. Data Cleaning
-- Removed duplicates
-- Handled missing values
-- Standardized column names
-- Converted date columns to datetime format
-- Created new feature: `total_spent = quantity * unit_price`
+### 2. Data Cleaning & Exploratory Data Analysis (EDA)
+- Handling missing data
+- Standardized column names for better readability
+- Checking data consistency to verify if all columns are relevant
+- Created new age_group column to categorise age groups
+- Connecting Python script to MySQL for further analysis
 
 ---
 
-### 3. Exploratory Data Analysis (EDA)
-- Analyzed overall sales performance
-- Identified top-selling product categories
-- Evaluated monthly sales trends
-- Found top customers by revenue contribution
-- Visualized patterns using Seaborn and Matplotlib
-
----
-
-### 4. SQL Analysis (MySQL)
+### 3. SQL Analysis (MySQL)
 Key queries performed:
-- Total sales calculation
 - Category-wise revenue analysis
-- Monthly sales trends
-- Top customers by spending
-- Purchase frequency analysis
+- Top products by Review Rating
+- Comparing Shipping Type
+- Subscribers vs. Non-Subscribers
+- Customer Segmentation 
 
 ---
 
-### 5. Power BI Dashboard
+### 4. Power BI Dashboard
 An interactive dashboard was created with:
 
 - Sales performance overview (KPIs)
-- Monthly revenue trends (line chart)
-- Category-wise sales distribution (bar chart)
-- Top customers analysis (table)
-- Dynamic filters (date, category, customer)
+- Revenue trends and Sales by Age Group (Bar chart)
+- Category-wise sales and Revenue distribution (Bar chart)
+- Customers Subscription Status (Donut Chart)
+- Filters (Subscription Status, Gender, Category and Shipping Type)
 
 ---
 
-### 6. Reporting
+### 5. Reporting
 - Summarized insights from analysis
 - Highlighted business recommendations
-- Identified opportunities for marketing and inventory optimization
 
 ---
 
 ## 📊 Key Insights
-- Certain product categories generated the highest revenue
-- A small group of customers contributed significantly to total sales
-- Seasonal trends were observed in purchase behavior
-- Repeat customers showed higher lifetime value
-- Data supports targeted marketing and stock optimization strategies
+- Promote benefits specifically for subscribers
+- Reward repeat buyers to make them more 'loyal'
+- Highlight top-rated and best-selling products
+- Focus on high-revenue age groups and express-shipping users
 
 ---
-
-## 📂 Project Structure
-```bash
-Retail-Customer-Analysis/
-│
-├── data/
-│   └── retail_data.csv
-│
-├── notebooks/
-│   └── analysis.ipynb
-│
-├── sql/
-│   └── queries.sql
-│
-├── powerbi/
-│   └── dashboard.pbix
-│
-├── outputs/
-│   └── cleaned_retail_data.csv
-│
-└── README.md
